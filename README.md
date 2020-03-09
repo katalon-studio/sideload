@@ -1,4 +1,6 @@
 # sideload
+Proof of Concept (POC) of executing katalon test on Appium
+
 ## Setup
 * Create new Android/iOS app on AppCenter
 * Open app
@@ -19,5 +21,5 @@ mvn -DskipTests -P prepare-for-upload package
 
 2. Upload and schedule tests
 ```sh
-*appcenter* test run appium --app <app_name> --devices <device_id/device_name> --app-path <path_to_app_file> --test-series "master" --locale "en_US" --build-dir target/upload
+appcenter test run appium --app <app_name> --devices <device_id/device_name> --app-path <path_to_app_file> --test-series "master" --locale "en_US" --build-dir target/upload
 ```
