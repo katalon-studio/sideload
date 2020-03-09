@@ -2,9 +2,6 @@ package com.katalon.sideload.utils;
 
 import com.katalon.utils.Logger;
 
-import java.util.logging.ConsoleHandler;
-import java.util.logging.SimpleFormatter;
-
 public class ConsoleLogger implements Logger {
 
     public java.util.logging.Logger logger;
@@ -15,7 +12,6 @@ public class ConsoleLogger implements Logger {
 
     @Override
     public void info(String message) {
-        logger.info(message);
-        System.out.println(message);
+        logger.info(message + "\n");
     }
 }

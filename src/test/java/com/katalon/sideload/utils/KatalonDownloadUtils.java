@@ -17,6 +17,18 @@ class KatalonDownloadUtils {
     private static final String RELEASES_LIST =
             "https://raw.githubusercontent.com/katalon-studio/katalon-studio/master/releases.json";
 
+    private static final KatalonVersion katalonVersion;
+
+    static {
+        katalonVersion = new KatalonVersion();
+        katalonVersion.setVersion("7.2.7");
+        katalonVersion.setOs(OsUtils.getOSVersion(null));
+        katalonVersion.setContainingFolder("Katalon_Studio_Engine_MacOS-7.2.7");
+        katalonVersion.setFilename("Katalon_Studio_Engine_MacOS-7.2.7.tar.gz");
+        katalonVersion.setUrl("https://katalon.s3.amazonaws.com/TECH-3/Katalon_Studio_Engine_MacOS-7.2.7.tar.gz");
+    }
+
+
     static File getKatalonPackage(
             Logger logger, String versionNumber, String rootDir)
             throws IOException, InterruptedException {
@@ -78,6 +90,7 @@ class KatalonDownloadUtils {
         ObjectMapper objectMapper = new ObjectMapper();
         List<KatalonVersion> versions = objectMapper.readValue(url, new TypeReference<List<KatalonVersion>>() {
         });
+        versions.add(katalonVersion);
 
         LogUtils.info(logger, "Number of releases: " + versions.size());
 

@@ -11,11 +11,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-class OsUtils {
+public class OsUtils {
 
     static String getOSVersion(Logger logger) {
 
@@ -47,7 +48,7 @@ class OsUtils {
         return "";
     }
 
-    static boolean runCommand(
+    public static boolean runCommand(
             Logger logger,
             String command,
             Path workingDirectory,
@@ -90,7 +91,13 @@ class OsUtils {
                 LogUtils.info(logger, line);
             }
         }
-        cmdProc.waitFor();
+
+        if (command.contains("katalonc")) {
+            Thread.sleep(60000);
+        } else {
+            cmdProc.waitFor();
+        }
+        LogUtils.info(logger, MessageFormat.format("FINISHED EXECUTING {0}. EXIT", String.join(" ", cmdarray)));
         return cmdProc.exitValue() == 0;
     }
 }
