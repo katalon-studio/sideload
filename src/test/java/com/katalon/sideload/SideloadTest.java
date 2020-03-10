@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Paths;
 import java.text.MessageFormat;
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 public class SideloadTest {
@@ -76,7 +77,7 @@ public class SideloadTest {
                 executeArgs,
                 null,
                 null,
-                System.getenv());
+                new HashMap<>(System.getenv()));
     }
 
     private void extractBinary(com.katalon.utils.Logger logger, String filePath, String targetDir) throws IOException, InterruptedException {

@@ -44,7 +44,8 @@ public class SideloadUtils {
             if (projectPath != null) {
                 projectPath = Paths.get(dirPath, projectPath).toAbsolutePath().toString();
             }
-            return KatalonUtils.executeKatalon(logger, version, ksLocation, projectPath, args, x11Display, xvfbConfiguration, System.getenv(), dirPath);
+            environmentVariablesMap.put("KATALON_HOME", dir.getAbsolutePath());
+            return KatalonUtils.executeKatalon(logger, version, ksLocation, projectPath, args, x11Display, xvfbConfiguration, environmentVariablesMap, dirPath);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             return false;
