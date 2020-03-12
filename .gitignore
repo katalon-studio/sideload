@@ -2,3 +2,6 @@ tmp
 .idea
 target
 *.iml
+.gradle
+node_modules
+package-lock.json
