@@ -35,7 +35,9 @@ System.out.println('Create Android Webdriver successful.')
 
 takeScreenshot(driver, 'start-app')
 
-List<MobileElement> btns = driver.findElementsByXPath("//*[@class = 'android.widget.TextView']")
+System.out.println(driver.getPageSource())
+
+List<MobileElement> btns = driver.findElementsByXPath("//*[@class = 'android.widget.TextView' and @text = 'Graphics']")
 
 MobileElement btn = btns.get(0)
 
@@ -49,7 +51,7 @@ catch (InterruptedException ex) {
 
 takeScreenshot(driver, 'btn-clicked')
 
-driver.quit()
+//driver.quit()
 
 def takeScreenshot(def driver, String name) {
     def srcFile = ((driver) as TakesScreenshot).getScreenshotAs(OutputType.FILE)
