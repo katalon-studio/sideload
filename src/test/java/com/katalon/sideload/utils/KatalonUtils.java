@@ -156,7 +156,7 @@ public class KatalonUtils {
                         "configuration", "resources", "drivers")
                         .toAbsolutePath();
             } else {
-                driverDirectoryPath = Paths.get(katalonDir,  "Contents", "Eclipse",
+                driverDirectoryPath = Paths.get(katalonDir, "Contents", "Eclipse",
                         "configuration", "resources", "drivers")
                         .toAbsolutePath();
             }

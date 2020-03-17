@@ -1,0 +1,1 @@
+package.bat && upload.bat

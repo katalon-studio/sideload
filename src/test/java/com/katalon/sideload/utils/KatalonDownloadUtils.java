@@ -25,7 +25,7 @@ class KatalonDownloadUtils {
         katalonVersion.setOs(OsUtils.getOSVersion(null));
         katalonVersion.setContainingFolder("Katalon_Studio_Engine_MacOS-7.2.7");
         katalonVersion.setFilename("Katalon_Studio_Engine_MacOS-7.2.7.tar.gz");
-        katalonVersion.setUrl("https://katalon.s3.amazonaws.com/TECH-3/Katalon_Studio_Engine_MacOS-7.2.7.tar.gz");
+        katalonVersion.setUrl("https://katalon.s3.amazonaws.com/STUDIO-70/Katalon_Studio_Engine_MacOS-7.2.7.tar.gz");
     }
 
 

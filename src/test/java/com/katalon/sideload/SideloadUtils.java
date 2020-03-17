@@ -39,14 +39,12 @@ public class SideloadUtils {
             FileUtils.copyToFile(is, tmp);
             unzip(tmp, dir);
 
-            String args = "-retry=0 -testSuitePath=\"Test Suites/ts1\" -executionProfile=\"default\" -browserType=\"Chrome\" -apiKey=\"f907ee68-f2b0-49a4-b6ef-b0e50f9b59d8\"";
-
             if (projectPath != null) {
                 projectPath = Paths.get(dirPath, projectPath).toAbsolutePath().toString();
             }
             environmentVariablesMap.put("KATALON_HOME", dir.getAbsolutePath());
             environmentVariablesMap.put("ECLIPSE_SANDBOX", "1.11");
-            return KatalonUtils.executeKatalon(logger, version, ksLocation, projectPath, args, x11Display, xvfbConfiguration, environmentVariablesMap, dirPath);
+            return KatalonUtils.executeKatalon(logger, version, ksLocation, projectPath, executeArgs, x11Display, xvfbConfiguration, environmentVariablesMap, dirPath);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             return false;
