@@ -33,7 +33,6 @@ String remoteServerUrl = System.getenv('XTC_SERVICE_ENDPOINT_APPIUM') + 'wd/hub'
 
 
 // ---------------------------------------------------------------------
-// Test 03: Use AppiumDriverManager.setDriver(...)
 
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, 'S10 Plus')
