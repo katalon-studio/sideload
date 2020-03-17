@@ -45,6 +45,7 @@ capabilities.setCapability('autoGrantPermissions', true)
 
 AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL(remoteServerUrl), capabilities)
 AppiumDriverManager.setDriver(driver)
+
 Mobile.comment('Create Android Webdriver successful.')
 
 
