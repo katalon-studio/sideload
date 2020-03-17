@@ -1,13 +1,9 @@
 package com.katalon.sideload;
 
 import com.microsoft.appcenter.appium.Factory;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.rules.TestWatcher;
 
-import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
@@ -30,7 +26,7 @@ public class SideloadTest {
     public void sideload() {
         String katalonProjectPackageFile = "MSAppCenter.zip";
         String projectPath = "MSAppCenter";
-        String executeArgs = "-retry=0 -testSuitePath=\"Test Suites/Test Suite 01\" -executionProfile=\"default\" -browserType=\"Remote\" -apiKey=\"f9074412-f2b0-49a4-b6ef-b0e50f9b59d8\"";
+        String executeArgs = "-retry=0 -testSuitePath=\"Test Suites/Test Suite 01\" -executionProfile=\"default\" -browserType=\"Chrome\" -apiKey=\"f907ee68-f2b0-49a4-b6ef-b0e50f9b59d8\"";
 
         String katalonVersion = "7.2.7";
         com.katalon.utils.Logger consoleLogger = new com.katalon.sideload.utils.ConsoleLogger(LOGGER);
@@ -44,5 +40,8 @@ public class SideloadTest {
                 null,
                 null,
                 new HashMap<>(System.getenv()));
+        if (!result) {
+            Assert.fail("Failed to execute Katalon");
+        }
     }
 }
