@@ -90,4 +90,4 @@ From your test project workspace:
 
 ## Usage example
 
-If you'd like to execute the usage example, which is the **MSAppCenter** project provided in **sideload**, please zip the **MSAppCenter** project folder and replace the existing one in `src/test/resources`. We recommend using devices with Android 7.1.1 to ensure the compatibility between the demo App and device.
+If you'd like to execute the usage example, **KatalonDemoProject** provided in **sideload**, we recommend using devices with Android 7.1.1 to ensure the compatibility between the demo App and device.
