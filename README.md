@@ -53,12 +53,12 @@ Since you have created a custom Appium driver. You will also need to comment out
 * Package your Katalon Project into a `zip` file and place it in the resources folder `src/test/resources`
 * Open `src/test/java/com.katalon.sideload/SideloadTest.java`, find the `sideload` test section and change the following variables as your context:
   - `katalonProjectPackageFile`: Your package file<br>
-    - (e.g. `"MSAppCenter.zip"`)
+    - (e.g. `"KatalonDemoProject.zip"`)
   - `projectPath`: Katalon project's folder name inside the `zip` package<br>
-    - (e.g. `"MSAppCenter"`)
+    - (e.g. `"KatalonDemoProject"`)
   - `executeArgs`: The arguments part of your Katalon run command<br>
-    - (e.g. `"-retry=0 -testSuitePath="Test Suites/Test Suite 01" -executionProfile="default" -browserType="Chrome" -apiKey="f9074412-f2b0-49a4-b6ef-b0e50f9b59d8""`)
-    > Please be noted that the `-browserType` argument must be set to `"Chrome"`.
+    - (e.g. `"-retry=0 -testSuitePath="Test Suites/Regression Tests" -executionProfile="default" -browserType="Chrome" -apiKey="f9074412-f2b0-49a4-b6ef-b0e50f9b59d8""`)
+    > Please note that the `-browserType` argument must be set to `"Chrome"`.
 
 ## Running tests
 
