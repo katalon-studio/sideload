@@ -24,9 +24,9 @@ public class SideloadTest {
 
     @Test
     public void sideload() {
-        String katalonProjectPackageFile = "MSAppCenter.zip";
-        String projectPath = "MSAppCenter";
-        String executeArgs = "-retry=0 -testSuitePath=\"Test Suites/Test Suite 01\" -executionProfile=\"default\" -browserType=\"Chrome\" -apiKey=\"f9074412-f2b0-49a4-b6ef-b0e50f9b59d8\"";
+        String katalonProjectPackageFile = "KatalonDemoProject.zip";
+        String projectPath = "KatalonDemoProject";
+        String executeArgs = "-retry=0 -testSuitePath=\"Test Suites/Regression Tests\" -executionProfile=\"default\" -browserType=\"Chrome\" -apiKey=\"f9074412-f2b0-49a4-b6ef-b0e50f9b59d8\"";
 
         String katalonVersion = "7.2.7";
         com.katalon.utils.Logger consoleLogger = new com.katalon.sideload.utils.ConsoleLogger(LOGGER);

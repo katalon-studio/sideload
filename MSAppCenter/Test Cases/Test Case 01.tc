@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Test Case 01</name>
-   <tag></tag>
-   <comment>Create Android Webdriver successful.</comment>
-   <testCaseGuid>dd436390-15f8-4ec8-82e2-7734c6702823</testCaseGuid>
-</TestCaseEntity>
