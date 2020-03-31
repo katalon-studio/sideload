@@ -92,12 +92,7 @@ public class OsUtils {
             }
         }
 
-        if (command.contains("katalonc")) {
-            Thread.sleep(60000);
-        } else {
-            cmdProc.waitFor();
-        }
-        LogUtils.info(logger, MessageFormat.format("FINISHED EXECUTING {0}. EXIT", String.join(" ", cmdarray)));
+        cmdProc.waitFor();
         return cmdProc.exitValue() == 0;
     }
 }
