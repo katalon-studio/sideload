@@ -93,6 +93,7 @@ public class OsUtils {
         }
 
         cmdProc.waitFor();
+        LogUtils.info(logger, MessageFormat.format("FINISHED EXECUTING {0}. EXIT CODE: {1}.", String.join(" ", cmdarray), cmdProc.exitValue()));
         return cmdProc.exitValue() == 0;
     }
 }
