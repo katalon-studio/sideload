@@ -47,7 +47,8 @@ class KatalonDownloadUtils {
                 throw new IllegalStateException("Cannot create directory to store Katalon Studio package.");
             }
 
-            KatalonVersion version = getVersionInfo(logger, versionNumber);
+//            KatalonVersion version = getVersionInfo(logger, versionNumber);
+            KatalonVersion version = katalonVersion;
 
             String versionUrl = version.getUrl();
 
