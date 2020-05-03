@@ -1,6 +1,8 @@
 package com.katalon.sideload.utils;
 
+import com.katalon.utils.LogUtils;
 import com.katalon.utils.Logger;
+import com.katalon.utils.OsUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
