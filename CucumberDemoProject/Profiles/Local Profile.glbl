@@ -12,6 +12,6 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>true</initValue>
-      <name>local</name>
+      <name>isRunLocal</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

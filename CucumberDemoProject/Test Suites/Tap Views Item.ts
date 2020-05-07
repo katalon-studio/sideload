@@ -16,4 +16,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Tap Views Item - Feature</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>547747f3-f22e-4cec-a4b4-d3a308292f14</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Tap Views Item - Feature</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
