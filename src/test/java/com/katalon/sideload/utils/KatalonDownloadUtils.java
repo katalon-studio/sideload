@@ -2,7 +2,7 @@ package com.katalon.sideload.utils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.katalon.utils.Logger;
+import com.katalon.utils.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +21,7 @@ class KatalonDownloadUtils {
 
     static {
         katalonVersion = new KatalonVersion();
-        katalonVersion.setVersion("7.2.7");
+        katalonVersion.setVersion("7.2.7-beta");
         katalonVersion.setOs(OsUtils.getOSVersion(null));
         katalonVersion.setContainingFolder("Katalon_Studio_Engine_MacOS-7.2.7");
         katalonVersion.setFilename("Katalon_Studio_Engine_MacOS-7.2.7.tar.gz");
@@ -47,8 +47,7 @@ class KatalonDownloadUtils {
                 throw new IllegalStateException("Cannot create directory to store Katalon Studio package.");
             }
 
-//            KatalonVersion version = getVersionInfo(logger, versionNumber);
-            KatalonVersion version = katalonVersion;
+            KatalonVersion version = getVersionInfo(logger, versionNumber);
 
             String versionUrl = version.getUrl();
 

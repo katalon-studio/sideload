@@ -69,6 +69,14 @@ public class SideloadUtils {
         zis.close();
     }
 
+    public static String getenv(String key, String defaultValue) {
+        String value = System.getenv(key);
+        if (value == null || value.isEmpty()) {
+            return defaultValue;
+        }
+        return value;
+    }
+
     private static File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
         // handle Zip Slip vulnerability
         File destFile = new File(destinationDir, zipEntry.getName());
