@@ -1,9 +1,11 @@
 package com.katalon.sideload;
 
+import com.katalon.sideload.utils.ConsoleLogger;
 import com.katalon.sideload.utils.KatalonUtils;
 import com.katalon.utils.Logger;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.annotation.Nullable;
 import java.io.*;
@@ -14,7 +16,6 @@ import java.util.zip.ZipInputStream;
 
 public class SideloadUtils {
     public static boolean executeKatalon(String testProjectPackage,
-                                         @Nullable Logger logger,
                                          String version,
                                          String ksLocation,
                                          @Nullable String projectPath,
@@ -39,12 +40,16 @@ public class SideloadUtils {
             FileUtils.copyToFile(is, tmp);
             unzip(tmp, dir);
 
+            if (StringUtils.isBlank(projectPath)) {
+                projectPath = testProjectPackage.replace(".zip", "");
+            }
+
             if (projectPath != null) {
                 projectPath = Paths.get(dirPath, projectPath).toAbsolutePath().toString();
             }
             environmentVariablesMap.put("KATALON_HOME", dir.getAbsolutePath());
             environmentVariablesMap.put("ECLIPSE_SANDBOX", "1.11");
-            return KatalonUtils.executeKatalon(logger, version, ksLocation, projectPath, executeArgs, x11Display, xvfbConfiguration, environmentVariablesMap, dirPath);
+            return KatalonUtils.executeKatalon(version, ksLocation, projectPath, executeArgs, x11Display, xvfbConfiguration, environmentVariablesMap, dirPath);
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
             return false;

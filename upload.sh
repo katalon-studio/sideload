@@ -11,10 +11,14 @@ appcenter test run appium --app <app_name> \
   --test-parameter "test_env=KATALON_PROJECT_PATH=<katalon_project_path>" \
   --test-parameter "test_env=KATALON_EXECUTE_ARGS=<katalon_execute_args>"
 
-# appcenter test run appium --app "katalon/demo-app" \
+# appcenter test run appium
+#  --app "katalon/Sideload" \
 #  --devices "katalon/nexus" \
 #  --app-path "apps/APIDemos.apk" \
 #  --test-series "master" \
 #  --locale "en_US" \
 #  --build-dir target/upload \
-#  --test-parameter "test_env=KATALON_EXECUTE_ARGS=-retry=0 -testSuitePath=""Test Suites/Regression Tests"" -executionProfile=default -browserType=Chrome -apiKey=""f9074412-f2b0-49a4-b6ef-b0e50f9b59d8"""
+#  --test-parameter "test_env=KATALON_VERSION=" \
+#  --test-parameter "test_env=KATALON_PROJECT_PACKAGE_FILE=KatalonDemoProject.zip" \
+#  --test-parameter "test_env=KATALON_PROJECT_PATH=" \
+#  --test-parameter "test_env=KATALON_EXECUTE_ARGS=-retry=0 -testSuitePath=""Test Suites/Regression Tests"" -executionProfile=default -browserType=Chrome -apiKey=""12345678-aaaa-bbbb-cccc-91011121314"""
