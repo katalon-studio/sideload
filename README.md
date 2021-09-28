@@ -1,6 +1,6 @@
 # sideload
 
-**sideload** is a Proof of Concept (POC) built for executing Katalon Studio tests on App Center Test. [App Center Test](https://docs.microsoft.com/en-us/appcenter/test-cloud/) only supports running tests using supported frameworks such as [Appium tests written in Java with JUnit](https://docs.microsoft.com/en-gb/appcenter/test-cloud/preparing-for-upload/appium); hence, Katalon users cannot execute their tests on App Center Test directly.
+**sideload** is a built for executing Katalon Studio tests on App Center Test. [App Center Test](https://docs.microsoft.com/en-us/appcenter/test-cloud/) only supports running tests using supported frameworks such as [Appium tests written in Java with JUnit](https://docs.microsoft.com/en-gb/appcenter/test-cloud/preparing-for-upload/appium); hence, Katalon users cannot execute their tests on App Center Test directly.
 
 By using **sideload** to package Katalon projects in JUnit format, you can execute your Katalon test scripts with devices provided on App Center Test. This tutorial shows you how to configure App Center Test, Katalon projects and **sideload** to execute the usage sample, which is **KatalonDemoProject**. Also, at the end of this tutorial, we provide some configurations that you can try to execute your Katalon projects on App Center Test.
 
