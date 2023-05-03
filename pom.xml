@@ -138,7 +138,7 @@
         <dependency>
             <groupId>com.microsoft.appcenter</groupId>
             <artifactId>appium-test-extension</artifactId>
-            <version>1.5</version>
+            <version>1.6</version>
         </dependency>
     </dependencies>
     <repositories>
